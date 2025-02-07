@@ -14,16 +14,16 @@ require('mason-lspconfig').setup({
 })
 
 -- Customizing the Python LSP (pylsp) settings
--- require('lspconfig').pylsp.setup({
---     settings = {
---         pylsp = {
---             configurationSources = {"flake8"},  -- Optional, choose the linter
---             plugins = {
---                 pycodestyle = {
---                     ignore = {"E501"},  -- Ignore E501 (line too long)
---                     maxLineLength = 120,  -- Optionally set a custom line length limit
---                 },
---             },
---         },
---     },
--- })
+ require('lspconfig').pylsp.setup({
+     settings = {
+         pylsp = {
+             configurationSources = {"flake8"},  -- Optional, choose the linter
+             plugins = {
+                 pycodestyle = {
+                     ignore = {"E501"},  -- Ignore E501 (line too long)
+                     maxLineLength = 120,  -- Optionally set a custom line length limit
+                 },
+             },
+         },
+     },
+ })
