@@ -19,6 +19,9 @@ return require('packer').startup(function(use)
         branch = "harpoon2",
         requires = { {"nvim-lua/plenary.nvim"} }
     }
+    -- FOR TeX
+    use {'lervag/vimtex'}
+    --
     use {'mbbill/undotree'}
     use {'tpope/vim-fugitive'}
     use {
@@ -42,14 +45,15 @@ return require('packer').startup(function(use)
         }
 
     }
-    use {"lewis6991/gitsigns.nvim"}
-    use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
-    }
+    use {"lewis6991/gitsigns.nvim", commit= "76927d1"}
+    use { "williamboman/mason.nvim", commit = "fc98833" }
+    use { "williamboman/mason-lspconfig.nvim", commit = "1a31f82" }
+    use "neovim/nvim-lspconfig"
     -- Prettier
     use{'jose-elias-alvarez/null-ls.nvim'}
     use{'MunifTanjim/prettier.nvim'}
+
+    -- Postman
+    -- use{'rest-nvim/rest.nvim'}
 
 end)
