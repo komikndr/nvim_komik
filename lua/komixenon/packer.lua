@@ -24,34 +24,23 @@ return require('packer').startup(function(use)
     --
     use {'mbbill/undotree'}
     use {'tpope/vim-fugitive'}
+    use 'neovim/nvim-lspconfig'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'L3MON4D3/LuaSnip'
+    use {"lewis6991/gitsigns.nvim"}
     use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        requires = {
-            --- Uncomment these if you want to manage LSP servers from neovim
-            -- {'williamboman/mason.nvim'},
-            -- {'williamboman/mason-lspconfig.nvim'},
-
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp'},
-            { 'hrsh7th/cmp-nvim-lsp'},
-            { 'hrsh7th/cmp-buffer'  },
-            { 'hrsh7th/cmp-path'    },
-            { 'hrsh7th/cmp-cmdline' },
-            {"saadparwaiz1/cmp_luasnip"},
-            {'L3MON4D3/LuaSnip'},
-        }
-
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
     }
-    use {"lewis6991/gitsigns.nvim", commit= "76927d1"}
-    use { "williamboman/mason.nvim", commit = "fc98833" }
-    use { "williamboman/mason-lspconfig.nvim", commit = "1a31f82" }
-    use "neovim/nvim-lspconfig"
-    -- Prettier
-    use{'jose-elias-alvarez/null-ls.nvim'}
-    use{'MunifTanjim/prettier.nvim'}
+    use 'nvimtools/none-ls.nvim'
+
+    -- LLM FIM
+    use{'ggml-org/llama.vim'}
 
     -- Postman
     -- use{'rest-nvim/rest.nvim'}
